@@ -122,3 +122,14 @@ while nums:
     heapq.heappop(nums) # O(logn)
 
 # MergeSort (and most built-in sorting functions)
+
+
+"""
+O(2^n) - Usually occurs with recursive algorithms where you have to create 
+two branches for every input.  
+"""
+def recursion(i, nums): # Recursion, tree height n, two branches
+    if i == len(nums):
+        return 0
+    branch1 = recursion(i + 1, nums)
+    branch2 = recursion(i + 2, nums)
