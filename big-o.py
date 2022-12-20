@@ -145,3 +145,15 @@ def recursion(i, nums, c): # c branches, where c is sometimes n.
     
     for j in range(i, i + c):
         branch = recursion(j + 1, nums)
+
+
+"""
+O(sqrt(n)) - Usually occurs when you need to get a factors of n input size.
+"""
+import math
+n = 12
+factors = set()
+for i in range(1, int(math.sqrt(n)) + 1): # Get all factors of n
+    if n % i == 0:
+        factors.add(i)
+        factors.add(n // i)
