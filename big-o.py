@@ -64,3 +64,14 @@ nums = [[1, 2, 3], [4, 5, 6]]
 for i in range(len(nums)): # Traverse rectangle grid
     for j in range(len(nums[i])):
         print(nums[i][j])
+
+
+"""
+O(n^3) - Exponential time, usually nested loop that iterate through an array
+multiple times for every input
+"""
+nums6 = [1, 2, 3]
+for i in range(len(nums6)): # Get every triplet of elements in array
+    for j in range(i + 1, len(nums6)):
+        for k in range(j + 1, len(nums6)):
+            print(nums6[i], nums6[j], nums6[k])
