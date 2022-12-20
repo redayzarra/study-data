@@ -36,7 +36,7 @@ heapq.heapify(nums) # Building a heap
 
 """
 O(n^2) - Exponential time, meaning that you are most likely iterating through 
-the input's sub-input as well which increases time exponentially
+the input's sub-input as well which increases time exponentially. Square grid.
 """
 nums2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 for i in range(len(nums2)): # Traversing through a square grid
@@ -49,3 +49,18 @@ for i in range(len(nums3)): # Get every pair of elements in array
         print(nums3[i], nums3[j])
 
 # Insertion sort (insert in middle n times -> n^2)
+
+
+"""
+O(n*m) - Exponential time, but more referring to a rectangular array of size
+n and width m. The time it would take would still look exponentail.
+"""
+nums4, nums5 = [1, 2, 3], [4, 5]
+for i in range(len(nums4)): # Get every pair of elements from two arrays
+    for j in range(len(nums5)):
+        print(nums4[i], nums5[j])
+
+nums = [[1, 2, 3], [4, 5, 6]]
+for i in range(len(nums)): # Traverse rectangle grid
+    for j in range(len(nums[i])):
+        print(nums[i][j])
