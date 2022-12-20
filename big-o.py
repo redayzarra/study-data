@@ -75,3 +75,36 @@ for i in range(len(nums6)): # Get every triplet of elements in array
     for j in range(i + 1, len(nums6)):
         for k in range(j + 1, len(nums6)):
             print(nums6[i], nums6[j], nums6[k])
+
+
+"""
+O(logn) - Logarithmic time, meaning the input size is basically being divided
+in half on every iteration. 2^x = n (x being number of times)
+"""
+nums = [1, 2, 3, 4, 5]
+target = 6 
+l, r = 0, len(nums) - 1
+while l <= r: # Binary search
+    m = (l + r) // 2
+    if target < nums[m]:
+        r = m - 1
+    elif target > nums[m]:
+        l = m + 1
+    else:
+        print(m)
+        break
+
+def search(root, target): # Binary Search on Binary Search Tree
+    if not root:
+        return False
+    if target < root.val:
+        return search(root.left, target)
+    elif target > root.val:
+        return search(root.right, target)
+    else: 
+        return True
+
+import heapq
+minHeap = []
+heapq.heappush(minHeap, 5) # Heap Push and Pop
+heapq.heappop(minHeap)
