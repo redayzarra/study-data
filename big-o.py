@@ -32,3 +32,20 @@ print(100 in nums) # Searching for an element
 
 import heapq
 heapq.heapify(nums) # Building a heap 
+
+
+"""
+O(n^2) - Exponential time, meaning that you are most likely iterating through 
+the input's sub-input as well which increases time exponentially
+"""
+nums2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+for i in range(len(nums2)): # Traversing through a square grid
+    for j in range(len(nums2[i])): 
+        print(nums2[i][j])
+
+nums3 = [1, 2, 3]
+for i in range(len(nums3)): # Get every pair of elements in array
+    for j in range(i + 1, len(nums3)):
+        print(nums3[i], nums3[j])
+
+# Insertion sort (insert in middle n times -> n^2)
