@@ -1,4 +1,6 @@
 """
+Rankings: O(1) < O(logn) < O(n) < O(nlogn) < O(n^2) < O(2^n) < O(n!)
+
 O(1) - Constant time, meaning that the input size will not affect the time
 it takes for the algorithm to run.
 """
@@ -157,3 +159,8 @@ for i in range(1, int(math.sqrt(n)) + 1): # Get all factors of n
     if n % i == 0:
         factors.add(i)
         factors.add(n // i)
+
+
+"""
+O(n!) - Usually occurs for permutations and for travelling salesman problem.
+"""
