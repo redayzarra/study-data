@@ -133,3 +133,15 @@ def recursion(i, nums): # Recursion, tree height n, two branches
         return 0
     branch1 = recursion(i + 1, nums)
     branch2 = recursion(i + 2, nums)
+
+
+"""
+O(c^n) - Occurs when you use recursion and create c, number of branches, for 
+every input.
+"""
+def recursion(i, nums, c): # c branches, where c is sometimes n.
+    if i == len(nums):
+        return 0
+    
+    for j in range(i, i + c):
+        branch = recursion(j + 1, nums)
