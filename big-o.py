@@ -108,3 +108,17 @@ import heapq
 minHeap = []
 heapq.heappush(minHeap, 5) # Heap Push and Pop
 heapq.heappop(minHeap)
+
+
+"""
+O(nlogn) - Logarithmic time, this means you're iterating through the input 
+and also looking at half of it each time.
+"""
+# HeapSort
+import heapq
+nums = [1, 2, 3, 4, 5]
+heapq.heapify(nums)     # O(n)
+while nums:
+    heapq.heappop(nums) # O(logn)
+
+# MergeSort (and most built-in sorting functions)
